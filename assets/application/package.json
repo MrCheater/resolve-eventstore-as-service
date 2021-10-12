@@ -1,0 +1,16 @@
+{
+  "name": "application",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "tsc",
+    "build": "build-assets --name=application",
+    "test": "echo || exit 0",
+    "test:w": "echo || exit 0",
+    "test:c": "echo || exit 0",
+    "test:f": "echo || exit 0"
+  },
+  "dependencies": {
+    "pg": "8.7.1"
+  }
+}

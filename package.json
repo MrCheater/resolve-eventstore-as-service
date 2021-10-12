@@ -1,0 +1,49 @@
+{
+  "name": "resolve-eventstore-as-service",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:MrCheater/resolve-eventstore-as-service.git",
+  "author": "mrcheater <mister.cheater@list.ru>",
+  "license": "MIT",
+  "dependencies": {
+    "archiver": "5.3.0",
+    "aws-sdk": "2.1005.0",
+    "resolve-cloud-common": "0.0.149",
+    "ts-node": "10.3.0",
+    "typescript": "4.4.3",
+    "prettier": "2.4.1",
+    "eslint": "8.0.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.25.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "@typescript-eslint/eslint-plugin": "5.0.0",
+    "@typescript-eslint/parser": "5.0.0",
+    "@types/node":"14.14.31",
+    "@types/chalk":"2.2.0",
+    "@types/archiver":"5.1.1",
+    "@types/minimist":"1.2.2",
+    "@types/rimraf":"3.0.2",
+    "minimist": "1.2.5",
+    "chalk": "4.1.2",
+    "rimraf": "3.0.2"
+  },
+  "scripts": {
+    "prepare": "yarn workspaces run prepare && yarn check-scripts",
+    "check-scripts": "tsc --noEmit",
+    "prettier": "prettier --write \"{,!(node_modules)/**/}*.{js,json,ts}\"",
+    "prettier:check": "prettier --list-different \"{,!(node_modules)/**/}*.{js,json,ts}\"",
+    "lint": "eslint . --ext=.js,.jsx,.ts,.tsx --ignore-path=./.prettierignore",
+    "build-assets": "ts-node scripts/build-assets.ts"
+  },
+  "workspaces": {
+    "packages": [
+      "assets/*"
+    ],
+    "nohoist": [
+      "**",
+      "**/**"
+    ]
+  }
+}
