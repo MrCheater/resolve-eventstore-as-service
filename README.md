@@ -1,0 +1,1 @@
+# resolve-eventstore-as-service
