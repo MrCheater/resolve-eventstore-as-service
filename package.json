@@ -35,7 +35,8 @@
     "prettier": "prettier --write \"{,!(node_modules)/**/}*.{js,json,ts}\"",
     "prettier:check": "prettier --list-different \"{,!(node_modules)/**/}*.{js,json,ts}\"",
     "lint": "eslint . --ext=.js,.jsx,.ts,.tsx --ignore-path=./.prettierignore",
-    "build-assets": "ts-node scripts/build-assets.ts"
+    "build-assets": "ts-node scripts/build-assets.ts",
+    "deploy": "ts-node scripts/deploy.ts"
   },
   "workspaces": {
     "packages": [

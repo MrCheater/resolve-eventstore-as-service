@@ -11,6 +11,6 @@
     "test:f": "echo || exit 0"
   },
   "dependencies": {
-    "pg": "8.7.1"
+    "@aws-sdk/client-rds-data": "3.36.0"
   }
 }
